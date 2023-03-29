@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    max-width: 1440px;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+.gray{
+    font-weight: 500;
+    color: #3d3d3d;
+}
+
+.underlined{
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.read-more-btn{
+    color: #f43421;
+}
+
+.read-more-btn::after{
+    content: '>>';
+    position: relative;
+    left: 5px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.read-more-btn:hover::after{
+    left: 10px;
+}
+
+img{
+    width: 100%;
+}
+
+#header{
+    display: flex;
+    padding: 0 2rem;
+    background-color: #fafafa;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #000;
+}
+
+#header #navbar ul{
+    display: flex;
+}
+
+#header #navbar ul li{
+    margin: 0 1rem;
+}
+
+#header #navbar ul li a{
+    color: #000;
+    text-transform: uppercase;
+}
+
+#header #navbar ul li a::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #f43421;
+    display: block;
+    position: relative;
+    top: 22px;
+    transition: 0.3s;
+}
+
+#header #navbar .active::before{
+    content: '';
+    width: 35%;
+    height: 2px;
+    background-color: #f43421;
+    display: block;
+    position: relative;
+    top: 22px;
+    transition: 0.3s;
+}
+
+#header #navbar ul li a:hover::before{
+    width: 35%;
+}
+
+#header .logo{
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+#main .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main .blog{
+    max-width: 90%;
+    margin-bottom: 2.5rem;
+}
+
+#main .blog h2{
+    margin: 1rem 0;
+}
+
+#main .blog img{
+    max-width: 800px;
+    max-height: 450px;
+    object-fit: cover;
+    background-position: bottom;
+    margin-bottom: 1rem;
+}
+
+#main .blog p{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+#main .author{
+    margin: 2rem 0;
+    font-style: italic;
+    font-family: serif;
+    font-size: 0.8rem;
+}
+
+#footer{
+    background-color: #fafafa;
+    text-align: center;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 700px) {
+    #main .blog{
+        max-width: 60%;
+    }
+}
